@@ -1,0 +1,17 @@
+<p class="text-center"><img src="assets/pok.png" alt="" *ngFor="let pokemon of pokemons" style="width:50px;" [title]="pokemon.name"></p>
+<p class="text-muted text-center">Vous disposez de {{pokemons.length}} poke ball</p>
+<section class="col-md-8 mx-auto">
+    <div class="row">
+
+        <div class="col-md-4 card" *ngFor="let pokemon of pokemons">
+            <img [src]="pokemon.picture" alt="">
+            <div class="card-body">
+                <p>{{pokemon.name}}</p>
+                <p>{{pokemon.type}}</p>
+                <p>{{pokemon.life}}</p>
+                <p>{{pokemon.id}}</p>
+                <p>{{pokemon.created | date:"dd/MM/yyyy"}}</p>
+            </div>
+        </div>
+    </div>
+</section>
